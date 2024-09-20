@@ -18,6 +18,7 @@ class MainTest(TestCase):
     def test_strong_mood_user(self):
         now = timezone.now()
         mood = MoodEntry.objects.create(
+          user = 1,
           mood="Happy",
           time = now,
           feelings = "I'm happy, even though my clothes are soaked from the rain :(",
